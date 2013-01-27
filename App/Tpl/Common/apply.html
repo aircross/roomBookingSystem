@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-借用申请</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/apply.css" />
+<load href="__PUBLIC__/css/RoomYY/applyList.css" />
+<style type="text/css">
+	tr:hover{
+	cursor: pointer;
+	}
+</style>
+</head>
+
+<body>
+<include file="Menu" />
+<div id="add-process">
+	<div class="steps">1.选择日期</div>
+	<div class="steps-pointer">-></div>
+	<div class="steps steps-disable">2.确定时间</div>
+	<div class="steps-pointer">-></div>
+	<div class="steps steps-disable">3.填写信息</div>
+</div>
+<form  action="__ROOT__/Common/applyAdd.html" method="post" >
+<div id="inputForm">
+	<p id="firstStep">借用日期：
+<input name="useDate" id="d422" maxlength="10" class="Wdate" type="text" onfocus="WdatePicker({dateFmt:'yyyy-M-d',minDate:'%y-%M-{%d+1}'})">
+	  <a id="tableInput" href="javascript:;">从借用状况表中选择</a></p>
+	<a id="nextUseTime" href="javascript:;" title="下一步"></a>
+	
+	<p id="secStep">开始时间：
+	<input name="startTime" type="text" id="d242" value="08:00" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'HH:mm',minDate:'8:00:00',maxDate:'22:00:00'})" class="Wdate"/>
+	结束时间：<input name="endTime" type="text" id="d242" value="22:00" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'HH:mm',minDate:'8:00:00',maxDate:'22:00:00'})" class="Wdate"/>
+	</p>
+	<p class="step-btn"><a id="beforeInfo" href="javascript:;" title="上一步"></a> <a id="nextInfo" title="下一步" href="javascript:;"></a></p>
+	<p id="otherInfo">借用用途: <input name="useWay" type="text" value="" /> 额外设备: <input name="exDevice" type="text" value="无" /></p>
+	
+	<p class="step-btn"><a id="beforefinished" href="javascript:;" title="上一步"></a> <input id="finished" name="sbubtn" type="submit"  value="" /></p>
+</div>
+</form>
+
+
+<include file="applyListForApply" />
+
+
+<include file="footer" />
+</body>
+<load href="__PUBLIC__/js/My97DatePicker/WdatePicker.js" />
+<load href="__PUBLIC__/js/jquery.js" />
+<script type="text/javascript">
+$(function(){
+
+$("#secStep").hide();
+$("#nextInfo").hide();
+$("#beforeInfo").hide();
+$("#otherInfo").hide();
+$("#finished").hide();
+$("#beforefinished").hide();
+
+
+	$("#nextUseTime").click(function(){
+	 $(".steps:eq(1)").removeClass("steps-disable");
+	 $("#firstStep").hide();
+	 $("#nextUseTime").hide();
+	 $("#beforeInfo").show();
+	 $("#secStep").show();
+	 $("#nextInfo").show();
+	})
+
+	$("#tableInput").click(function(){
+		$("#inputForm").hide();
+		$("#dataSelect").show();
+	})
+
+	
+
+
+	$("#nextInfo").click(function(){
+	$(".steps:eq(2)").removeClass("steps-disable");
+	$("#secStep").hide();
+	$("#nextInfo").hide();
+	$("#beforeInfo").hide();
+	$("#beforefinished").show();
+	$("#otherInfo").show();
+	$("#finished").show();
+	})
+
+	$("#beforeInfo").click(function(){
+		$("#beforeInfo").hide();
+	 	$("#secStep").hide();
+	 	$("#nextInfo").hide();
+
+	 $(".steps:eq(1)").addClass("steps-disable");
+	 $("#firstStep").show();
+	 $("#nextUseTime").show();
+	 
+
+	})
+
+	$("#beforefinished").click(function(){
+	$("#beforefinished").hide();
+	$("#otherInfo").hide();
+	$("#finished").hide();
+	$(".steps:eq(2)").addClass("steps-disable");
+	$("#secStep").show();
+	$("#nextInfo").show();
+	$("#beforeInfo").show();
+	
+	})
+
+
+})
+</script>
+</html>

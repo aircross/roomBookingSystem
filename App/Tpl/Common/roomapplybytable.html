@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-借用申请</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/apply.css" />
+
+</head>
+
+<body>
+<include file="Menu" />
+<div id="add-process">
+	<div class="steps">1.选择日期</div>
+	<div class="steps-pointer">-></div>
+	<div class="steps ">2.确定时间</div>
+	<div class="steps-pointer">-></div>
+	<div class="steps steps-disable">3.填写信息</div>
+</div>
+<form id="roomApplyBox" action="__URL__/applyAdd.html" method="post" >
+
+<!--<p>第一步：选择教室</p>
+<select name="room" style="display:none;">
+	
+	<volist name="room" id="vo">
+  		<option value="{$vo.roomName}">{$vo.roomName}</option>
+    </volist>
+</select>
+-->
+<div id="inputForm">
+<input name="useDate" type="hidden" value="{$Date}" >
+<p id="secStep">开始时间：
+	<input name="startTime" type="text" id="d242" value="{$startTime}" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'HH:mm',minDate:'8:00:00',maxDate:'22:00:00'})" class="Wdate"/>
+	结束时间：<input name="endTime" type="text" id="d242" value="{$endTime}" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'HH:mm',minDate:'8:00:00',maxDate:'22:00:00'})" class="Wdate"/>
+	</p>
+	 <a id="nextInfo" href="javascript:;" title="下一步"></a>
+
+	 <p id="otherInfo">借用用途: <input name="useWay" type="text" value="" /> 额外设备: <input name="exDevice" type="text" value="无" /></p>
+	
+	<p class="step-btn"><a id="beforefinished" href="javascript:;" title="上一步"></a> <input id="finished" name="sbubtn" type="submit"  value="" /></p>
+
+
+</div>
+</form>
+<include file="footer" />
+</body>
+<load href="__PUBLIC__/js/My97DatePicker/WdatePicker.js" />
+<load href="__PUBLIC__/js/jquery.js" />
+<script type="text/javascript">
+$(function(){
+$("#otherInfo").hide();
+$("#beforefinished").hide();
+$("#finished").hide();
+	$("#nextInfo").click(function(){
+	$(".steps:eq(2)").removeClass("steps-disable");
+	$("#secStep").hide();
+	$("#nextInfo").hide();
+	$("#beforeInfo").hide();
+	$("#beforefinished").show();
+	$("#otherInfo").show();
+	$("#finished").show();
+	})
+
+
+	$("#beforefinished").click(function(){
+	$("#beforefinished").hide();
+	$("#otherInfo").hide();
+	$("#finished").hide();
+	$(".steps:eq(2)").addClass("steps-disable");
+	$("#secStep").show();
+	$("#nextInfo").show();
+	$("#beforeInfo").show();
+	
+	})
+})
+</script>
+</html>

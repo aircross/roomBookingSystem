@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-编辑申请</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/applyEdit.css" />
+
+</head>
+
+<body>
+<include file="Common:Menu" />
+
+<table  border="1">
+<thead>
+	<th>借用日期</th>
+	<th>开始时间</th>
+	<th>结束时间</th>
+	<th>借用用途</th>
+	<th>额外设备</th>
+	<th>审批部门</th>
+	<th>操作</th>
+</thead>
+<tbody>
+<?php $nowdate=strtotime(date("Y-n-d"));/*echo $nowdate.'/';获取当前日期*/?>
+<volist name="roomApplyed" id="vo">
+<assign name="setTime" value="$vo.useDate" /> 
+
+    <?php $setdate=strtotime("$setTime");/*echo $setdate-$nowdate;与该日期进行对比*/?>
+	 <if condition="$setdate gt $nowdate">
+	<tr>
+		<form method="post" action="roomapplyedEditAction.html">
+		<input name="id" type="hidden" value="{$vo.id}"/>
+		<td><input name="useDate" type="text" value="{$vo.useDate}"/></td>
+		<td><input name="startTime" type="text" value="{$vo.startTime}"/></td>
+		<td><input name="endTime" type="text" value="{$vo.endTime}"/></td>
+		<td>{$vo.useWay}</td><td>{$vo.exDevice}</td>
+		<td>
+		<if condition="$vo.state eq 1"> <span style="color:red;">{$vo.department}</a>
+			<elseif condition="$vo.state eq 2"/><span style="color:green;">总务处</span>
+			<else /> 
+		</if>
+
+
+		</td>
+		<td><input name="submit" type="submit" value="修改"/> <!--| <a href="__URL__/roomapplyeddel/id/{$vo.id}">删除</a>--></td>
+		</form>
+	</tr>
+	<else />
+	</if>
+</volist>
+</tbody>
+</table>
+
+
+<include file="Common:footer" />
+</body>
+
+
+
+</html>

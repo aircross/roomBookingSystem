@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-编辑申请</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/applyEdit.css" />
+
+</head>
+
+<body>
+<include file="Menu" />
+<p style="width:960px; margin:0 auto;height:40px;line-height:40px;font-size:1.2em;"> <a href="__ROOT__/Common/myapply/now">当前</a> |  <a href="__ROOT__/Common/myapply/past">历史</a> </p>
+
+
+<table  border="1">
+<thead>
+	<th>序号</th>
+	<th>借用日期</th>
+	<th>开始时间</th>
+	<th>结束时间</th>
+	<th>借用用途</th>
+	<th>额外设备</th>
+	<th>状态</th>
+	<th>操作</th>
+</thead>
+<tbody>
+<?php $nowdate=strtotime(date("Y-n-d"));/*echo $nowdate.'/';获取当前日期*/?>
+<if condition="$_GET['_URL_'][2] eq 'past' ">
+<volist name="roomApplyed" id="vo">
+	
+	<assign name="setTime" value="$vo.useDate" /> 
+
+    <?php $setdate=strtotime("$setTime");/*echo $setdate-$nowdate;与该日期进行对比*/?>
+      
+	 <if condition="$setdate elt $nowdate">
+	 
+	<tr>
+		<form method="post" action="roomapplyedEditAction.html">
+
+		<input name="id" type="hidden" value="{$vo.id}"/>
+		<td>{$vo.id}</td>
+		<td><input name="useDate" type="text" value="{$vo.useDate}"/></td>
+		<td><input name="startTime" type="text" value="{$vo.startTime}"/></td>
+		<td><input name="endTime" type="text" value="{$vo.endTime}"/></td>
+		<td><input name="useWay" type="text" value="{$vo.useWay}"/></td>
+		
+		<td><input name="useWay" type="text" value="{$vo.exDevice}"/></td>
+		<td>
+		<if condition="$vo.state eq 0"> <span style="color:red;">等待部门审核</a>
+			<elseif condition="$vo.state eq 1"/><span style="color:##AA970B;">等待总务处终审</a>
+			<elseif condition="$vo.state eq 2"/><span style="color:green;">审核通过</span>
+			<elseif condition="$vo.state eq -1 "/><span style="color:red;">部门驳回</span>
+			<elseif condition="$vo.state eq -2"/><span style="color:red;">总务处驳回</span>
+			<else /> 
+		</if>
+	
+
+		</td>
+		<td>
+		<if condition="$vo.state eq 0">
+		<input name="submit" type="submit" value="修改"/> | <a href="__URL__/applyDel/id/{$vo.id}">删除</a>
+		<else />无
+		</if>
+		
+	
+		</td>
+		</form>
+	</tr>
+	</if>
+</volist>
+
+<else />
+<volist name="roomApplyed" id="vo">
+	
+	<assign name="setTime" value="$vo.useDate" /> 
+
+    <?php $setdate=strtotime("$setTime");/*echo $setdate-$nowdate;与该日期进行对比*/?>
+      
+	 <if condition="$setdate gt $nowdate">
+	 
+	<tr>
+		<form method="post" action="roomapplyedEditAction.html">
+
+		<input name="id" type="hidden" value="{$vo.id}"/>
+		<td>{$vo.id}</td>
+		<td><input name="useDate" type="text" value="{$vo.useDate}"/></td>
+		<td><input name="startTime" type="text" value="{$vo.startTime}"/></td>
+		<td><input name="endTime" type="text" value="{$vo.endTime}"/></td>
+		<td><input name="useWay" type="text" value="{$vo.useWay}"/></td>
+		
+		<td><input name="useWay" type="text" value="{$vo.exDevice}"/></td>
+		<td>
+		<if condition="$vo.state eq 0"> <span style="color:red;">等待部门审核</a>
+			<elseif condition="$vo.state eq 1"/><span style="color:##AA970B;">等待总务处终审</a>
+			<elseif condition="$vo.state eq 2"/><span style="color:green;">审核通过</span>
+			<elseif condition="$vo.state eq -1"/><span style="color:red;">部门驳回</span>
+			<elseif condition="$vo.state eq -2"/><span style="color:red;">总务处驳回</span>
+			<else /> 
+		</if>
+
+
+		</td>
+		<td>
+		<if condition="$vo.state eq 0">
+		<input name="submit" type="submit" value="修改"/> | <a href="__URL__/applyDel/id/{$vo.id}">删除</a>
+		<else />无
+		</if>
+		
+	
+		</td>
+		</form>
+	</tr>
+	</if>
+</volist>
+</if> 
+
+</tbody>
+</table>
+
+
+<include file="footer" />
+</body>
+
+
+
+</html>

@@ -1,0 +1,89 @@
+<div id="dataSelect" style="display:none;">
+<p id="dataP">
+{$year}年 
+<select name="month"  onchange="javascript:window.location.href=this.options[this.selectedIndex].value">
+  <for start="$monthNow" end="$month" name="i">
+  <option name="month" value="__ACTION__/month/{$i}">{$i}月</option>
+  </for>  
+
+  <option name="month" value="__ACTION__/month/{$i}" selected="selected">{$i}月</option>
+
+  <for start="$month+1" end="12+1" name="i">
+  <option name="month" value="__ACTION__/month/{$i}">{$i}月</option>
+  </for>              
+</select>
+</p>
+
+<table width="100%" border="1" >
+  <thead >
+    <tr >
+      <th scope="col">日期</th>
+      <th scope="col">星期</th>
+      <th scope="col">时段 08：00-22：00</th>     
+    </tr>
+  </thead>
+
+<tbody>
+  <for start="$today" end="++$maxDay" name="i">
+    <tr>
+      
+      <td width=60>{$month}月{$i}日</td>
+
+      <td width=60>星期
+      <if condition="$week lt 7 ">
+        
+      <else /><!--{$week=0}-->
+
+      </if>
+
+        
+        <if condition="$week eq 0 ">日</if>
+        <if condition="$week eq 1 ">一</if>
+        <if condition="$week eq 2 ">二</if>
+        <if condition="$week eq 3 ">三</if>
+        <if condition="$week eq 4 ">四</if>
+        <if condition="$week eq 5 ">五</if>
+        <if condition="$week eq 6 ">六</if>
+        <!--{$week++}-->
+      </td>
+    
+      <td style="padding:0;" >
+      <?php $newdate=$year.'-'.$month.'-'.$i;?>
+  <assign name="lastTime" value="08:00" /> 
+      <foreach name="roomApply" item="vo">
+        
+        <if condition="$vo.useDate eq $newdate">
+        <assign name="firstTime" value="$vo.startTime" /> 
+        
+
+        <if condition="$firstTime neq $lastTime"><!--开始时间和结束时间不相同-->
+  
+          <?php $percent = strtotime("$firstTime")-strtotime("$lastTime")-120; ?>
+           <a href="__URL__/roomApplyByTable/Date/{$newdate}/startTime/{$lastTime}/endTime/{$firstTime}">
+             <div  class="freeTime" percent="{$percent/504}" title="空闲时段 {$lastTime} - {$vo.startTime}" style="width:{$percent/504}%;height:100%;float:left;cursor: pointer;/*background-color:#fafafa;*/" ><!--{$lastTime} - {$vo.startTime}--></div>
+          </a>
+    </if>
+        <assign name="lastTime" value="$vo.endTime" /> 
+        <?php $percent = strtotime("$lastTime")-strtotime("$firstTime")-120; ?>
+        <div percent="{$percent/504}" style="width:{$percent/504}%;height:100%;float:left;background-color:#3C3737; border:1px solid #fff;cursor: pointer;" title="{$vo.startTime}-{$vo.endTime} | {$vo.department} | {$vo.applyer} | {$vo.phone} | {$vo.useWay}" > <!--{$vo.startTime} - {$vo.endTime}--></div>
+
+         
+        
+        
+
+        <else /> 
+        </if>  
+      </foreach>
+
+      <if condition="$lastTime neq '22:00' ">
+      <?php $percent = strtotime("22:00")-strtotime("$lastTime")-120; ?>
+      <a href="__URL__/roomApplyByTable/Date/{$newdate}/startTime/{$lastTime}/endTime/22:00">
+        <div class="freeTime" percent="{$percent/504}" title="空闲时段 {$lastTime}-22:00" style="width:{$percent/504}%;height:20px;float:left;/*background-color:#fafafa;*/" ><!--{$lastTime}-22:00--></div>
+      </a>
+      </if>
+      </td>    
+    </tr>
+  </for>
+</tbody> 
+</table>
+</div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html >
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>报告厅智能借用系统</title>
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css"/>
+<load href="__PUBLIC__/css/RoomYY/index.css"/>
+<!--[if IE]>
+    <load href="__PUBLIC__/js/html5.js"/>
+   
+<![endif]-->
+</head>
+
+
+
+<body>
+
+   <div class="container">
+            <!-- 顶部 -->
+            <div class="header">
+                <header>
+                    <!-- 邮箱logo -->
+                    <h1 class="logo"><a href="__ROOT__/" target="_blank"><img src="__ROOT__/Public/img/logo.png" alt="" width="160" height="37"></a></h1>
+                    <h2><a class="subLogo" ></a></h2>
+                </header>
+                <!-- 链接 -->
+                
+                
+            </div>
+            <!-- 主要内容 -->
+            <div class="content">
+                <!-- tab切换 -->
+                <nav class="tab">
+                    
+                    
+                    <ul class="tab-list">
+                        <li class="tab-item tab-item-on " id="tab163"><a id="tab163Link" hidefocus="" href="javascript:void(0);" class="mail163">总务处登录</a></li>
+                        <li class="tab-item " id="tab126"><a id="tab126Link" hidefocus="" href="javascript:void(0);" class="mail126">部门用户登录</a></li>
+                        <li class="tab-item" id="tabyeah"><a id="tabyeahLink" hidefocus="" href="javascript:void(0);" class="mailyeah">个人用户登录</a></li>
+                        <li class="tab-item" id="tabqiye"><a id="tabqiyeLink" hidefocus="" href="javascript:void(0);" class="mailqiye">报告厅管理员登陆</a></li>
+                    </ul>
+                </nav>
+                <!-- login区 -->
+                <section class="login">
+                 
+                    <header>
+                        <h2 class="hd" id="LoginTitle">登录</h2>
+                    </header>
+                   
+                    <form class="bd" name="frmLogin" method="post" id="loginForm" onsubmit="return fSubmit()" target="_top" action="__ROOT__/admin/check.html">
+                        
+                       
+                        
+                        <!-- 用户名 -->
+                        <div class="item showPlaceholder" style="position:relative;" id="idInputLine">
+                            <label class="name" for="userNameIpt">帐&nbsp;&nbsp; 号</label>
+                            <input name="userName" id="userNameIpt"  type="text" class="ipt ipt-t" value="总务处" readonly>   
+                            <select name="department" id="department"  style="width:140px;" class="ipt ipt-t">
+                                <option value="党委办公室">党委办公室</option>
+                                <option value="院长办公室">院长办公室</option>
+                                <option value="拆迁办">拆迁办</option>
+                                <option value="教务处">教务处</option>
+                                <option value="学工部">学工部</option>
+                                <option value="团委">团委</option>
+                                <option value="招就处">招就处</option>
+                                <option value="人事科">人事科</option>
+                                <option value="后勤科">后勤科</option>
+                                <option value="实验中心">实验中心</option>
+                                <option value="财务部">财务部</option>
+                                <option value="图书馆">图书馆</option>
+                                
+                                <option value="人文科学系">人文科学系</option>
+                                <option value="外语系">外语系</option>
+                                <option value="生命科学系">生命科学系</option>
+                                <option value="信息与电子系">信息与电子系</option>
+                                <option value="工程与技术系">工程与技术系</option>
+                                <option value="经济与管理系">经济与管理系</option>
+                                <option value="服装与艺术设计系">服装与艺术设计系</option>    
+                                <option value="基础课部">基础课部</option>
+                            </select>                 
+                            
+                        </div>
+                        <!-- 密码 -->
+                        <div class="item">
+                            <label class="name" for="pwdInput">密&nbsp;&nbsp; 码</label><input id="pwdInput" name="userPass" tabindex="1" type="password" class="ipt ipt-t">
+                        </div>
+                        
+                        
+                        <!-- 提交按钮 -->
+                        <div class="item submit">
+                            <input tabindex="7" type="submit" class="btn btn-submit" id="btnSubmit" value="登 录">
+                            <span class="txt-err" id="divError"></span>
+                        </div>
+                    </form>
+                    <footer class="ft" id="loginFootTips">还没有账号?<a href="__APP__/admin/reg.html" tabindex="9">立即注册</a></footer>
+                </section>
+                
+            </div>
+            <!-- 底部 -->
+            <div class="footer">
+               
+                <footer class="copyright">                 
+                    <ul class="copy-list">
+                        <li class="copy-item">报告厅智能借用系统</li>
+                        <li class="copy-item">|&nbsp;&nbsp;绍兴文理学院元培学院版权所有&nbsp;©&nbsp;2012&nbsp;&nbsp;|</li>
+                        <li class="copy-item"><a title="计算机0901 王学峰 687905" href="http://wtser.42qu.com/" target="_blank">技术支持</a></li>
+
+                    </ul>
+                </footer>
+            </div>
+        </div>
+</body>
+<load href="__PUBLIC__/js/jquery.js" />
+<script type="text/javascript">
+$(function(){
+$("#department").hide();
+$("#pwdInput").focus();
+    $("#tab163").click(function(){
+        $(".tab-list li").removeClass("tab-item-on");
+        $(this).addClass("tab-item-on");
+        $("#userNameIpt").val('总务处');
+        $("#userNameIpt").attr("readonly","readonly");
+        $("#department").hide();
+        $("#userNameIpt").show();
+        $("#pwdInput").focus();
+    })
+
+    $("#tab126").click(function(){
+        $(".tab-list li").removeClass("tab-item-on");
+        $(this).addClass("tab-item-on");
+        $("#userNameIpt").val('');
+        $("#userNameIpt").removeAttr("readonly");
+        $("#userNameIpt").hide();
+        $("#department").show();
+    })
+
+    $("#tabyeah").click(function(){
+        $(".tab-list li").removeClass("tab-item-on");
+        $(this).addClass("tab-item-on");
+        $("#userNameIpt").val('');
+        $("#userNameIpt").removeAttr("readonly");
+        $("#department").hide();
+        $("#userNameIpt").show();
+        $("#userNameIpt").focus();
+    })
+
+    $("#tabqiye").click(function(){
+        $(".tab-list li").removeClass("tab-item-on");
+        $(this).addClass("tab-item-on");
+        $("#userNameIpt").val('报告厅管理员');
+        $("#userNameIpt").attr("readonly","readonly");
+        $("#department").hide();
+        $("#userNameIpt").show();
+        $("#pwdInput").focus();
+    })
+})
+</script>
+</html>
+

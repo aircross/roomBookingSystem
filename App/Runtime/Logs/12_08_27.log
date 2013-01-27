@@ -1,0 +1,203 @@
+------127.0.0.1 REQUEST_URI:/report/------
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.017306s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.017486s ]
+[ 2012-08-27T15:11:59+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:11:59+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:11:59+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:11:59+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.003448s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.003548s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.076696s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.076804s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.010886s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.002150s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.001707s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.011133s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.026206s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:11:59+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.012439s ]
+[ 2012-08-27T15:11:59+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.012528s ]
+
+------127.0.0.1 REQUEST_URI:/report/------
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.001781s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001943s ]
+[ 2012-08-27T15:12:20+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:12:20+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:12:20+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:12:20+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.002792s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.002888s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.023350s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.023471s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.001560s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.002256s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.001740s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.001704s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.007599s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:12:20+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.001959s ]
+[ 2012-08-27T15:12:20+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.002051s ]
+
+------127.0.0.1 REQUEST_URI:/report/common/situation.html------
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001329s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001483s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001088s ]
+[ 2012-08-27T15:12:47+08:00 ] NOTIC: [8] Use of undefined constant _URL_ - assumed '_URL_' CommonAction.class.php 第 15 行.
+[ 2012-08-27T15:12:47+08:00 ] NOTIC: [8] Undefined offset:  3 CommonAction.class.php 第 15 行.
+[ 2012-08-27T15:12:47+08:00 ] NOTIC: [8] Use of undefined constant now - assumed 'now' CommonAction.class.php 第 32 行.
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.020355s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.020478s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:12:47+08:00 ] NOTIC: [8] Undefined variable: department a4fbe9a20bc692d7948d533d1b6527b3.php 第 32 行.
+[ 2012-08-27T15:12:47+08:00 ] NOTIC: [8] Undefined variable: 8 a4fbe9a20bc692d7948d533d1b6527b3.php 第 40 行.
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.046063s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.046140s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000922s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000832s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000537s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000824s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.003372s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:12:47+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.001284s ]
+[ 2012-08-27T15:12:47+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.001407s ]
+
+------127.0.0.1 REQUEST_URI:/report/Common/myApply.html------
+[ 2012-08-27T15:13:00+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:13:00+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001340s ]
+[ 2012-08-27T15:13:00+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001482s ]
+[ 2012-08-27T15:13:00+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:13:00+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000924s ]
+[ 2012-08-27T15:13:00+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001012s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.016761s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.016879s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:13:01+08:00 ] NOTIC: [8] Undefined variable: department b403afe1cb5e18eaa6f22240e24af013.php 第 31 行.
+[ 2012-08-27T15:13:01+08:00 ] NOTIC: [8] Undefined offset:  2 b403afe1cb5e18eaa6f22240e24af013.php 第 50 行.
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.032189s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.032276s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000715s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000740s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000533s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000806s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.003052s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:13:01+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000825s ]
+[ 2012-08-27T15:13:01+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000912s ]
+
+------127.0.0.1 REQUEST_URI:/report/Common/myapply/past------
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001355s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001497s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000927s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001013s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000810s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000922s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:13:02+08:00 ] NOTIC: [8] Undefined variable: department b403afe1cb5e18eaa6f22240e24af013.php 第 31 行.
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.025221s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.025301s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000720s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000711s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000516s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000787s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002983s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:13:02+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000824s ]
+[ 2012-08-27T15:13:02+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000907s ]
+
+------127.0.0.1 REQUEST_URI:/report/Common/apply.html------
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001327s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001467s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000983s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001076s ]
+[ 2012-08-27T15:13:04+08:00 ] NOTIC: [8] Use of undefined constant _URL_ - assumed '_URL_' CommonAction.class.php 第 70 行.
+[ 2012-08-27T15:13:04+08:00 ] NOTIC: [8] Undefined offset:  3 CommonAction.class.php 第 70 行.
+[ 2012-08-27T15:13:04+08:00 ] NOTIC: [8] Use of undefined constant now - assumed 'now' CommonAction.class.php 第 87 行.
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.002534s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.002661s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:13:04+08:00 ] NOTIC: [8] Undefined variable: department ef6aab9e6f06fc472323dd1105521ef1.php 第 36 行.
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.056402s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.056480s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000815s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000829s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000561s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000824s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.003285s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:13:04+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.001309s ]
+[ 2012-08-27T15:13:04+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.001431s ]
+
+------127.0.0.1 REQUEST_URI:/report/Common/applyCheck.html------
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001348s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001503s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000937s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001026s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.010454s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.010577s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:13:05+08:00 ] NOTIC: [8] Undefined variable: department 45bd4741b4a77c6bdbf9aae461474c73.php 第 31 行.
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.029426s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.029549s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000766s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000776s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000550s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000778s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.003140s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:13:05+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000804s ]
+[ 2012-08-27T15:13:05+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000915s ]
+
+------127.0.0.1 REQUEST_URI:/report/index/index.html------
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ route_check ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run CheckRoute Behavior [ RunTime:0.001509s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ route_check ] --END-- [ RunTime:0.001652s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000947s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.001035s ]
+[ 2012-08-27T15:13:17+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:13:17+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:13:17+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:13:17+08:00 ] NOTIC: [8] Undefined index:  type functions.php 第 501 行.
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000751s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000839s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.011009s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.011115s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000694s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000952s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000573s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000810s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.003308s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-08-27T15:13:17+08:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000815s ]
+[ 2012-08-27T15:13:17+08:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000898s ]
+

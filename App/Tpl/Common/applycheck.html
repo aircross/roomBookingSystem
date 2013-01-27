@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-借用审核</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/applyEdit.css" />
+
+</head>
+
+<body>
+<include file="Menu" />
+<table border="1">
+<thead>
+	<th>序号</th>
+	<th>借用时间</th>
+	<th>借用用途</th>
+	<th>额外设备</th>
+	<th>借用者</th>
+		<th>审批部门</th>
+	<th>操作</th>
+</thead>
+<tbody>
+<volist name="roomApplyCheck" id="vo">
+	<tr>
+		
+		<td>{$vo.id}</td>
+		<td>{$vo.useDate} {$vo.startTime} - {$vo.endTime}</td>
+		<td>{$vo.useWay}</td>
+		<td>{$vo.exDevice}</td>
+		<td title="{$vo.phone}">{$vo.applyer}</td>
+		<td>{$vo.department}</td>
+		
+
+
+	
+		<td><a href="__URL__/agree/id/{$vo.id}">同意</a>| <a href="__URL__/refuse/id/{$vo.id}">驳回</a></td>
+		
+	</tr>
+</volist>
+
+</tbody>
+</table>
+
+
+
+
+<include file="footer" />
+</body>
+
+</html>

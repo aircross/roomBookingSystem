@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-预约列表</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+
+<style type="text/css">
+<!--
+#changePass {
+	height:200px;
+	width:230px;
+	margin:10px auto;
+	font-size:1.6em;
+}
+#changePass input{
+margin-top:5px;
+
+}
+
+#changePass p{
+line-height:30px;
+font-weight: bold;
+color: 
+#7A7373;
+}
+-->
+</style>
+</head>
+
+<body>
+<include file="Menu" />
+
+<form id="changePass" method="post" action="passChangeUpdate.html">
+<p>密码修改</p>
+<input id="oldPass" name="oldPass" type="text" value="输入旧密码" />
+<input id="newPass" name="newPass" type="text" value="输入新密码" />
+<input name="" type="submit" value="确认修改" />
+</form>
+<include file="footer" />
+</body>
+
+<load href="__PUBLIC__/js/jquery.js" />
+<script type="text/javascript">
+$(function(){
+	$("#oldPass").focus(function(){
+		if($("#oldPass").val()=='输入旧密码'){
+			$("#oldPass").val('');
+		}        
+    })
+
+    $("#oldPass").blur(function(){
+    	if($("#oldPass").val()==''){
+			$("#oldPass").val('输入旧密码');
+		}
+       
+    })
+
+    $("#newPass").focus(function(){
+		if($("#newPass").val()=='输入新密码'){
+			$("#newPass").val('');
+		}        
+    })
+
+    $("#newPass").blur(function(){
+    	if($("#newPass").val()==''){
+			$("#newPass").val('输入新密码');
+		}
+       
+    })
+
+})
+
+
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台-用户管理</title>
+
+<load href="__PUBLIC__/css/RoomYY/cssreset-min.css" />
+<load href="__PUBLIC__/css/RoomYY/base.css" />
+<load href="__PUBLIC__/css/RoomYY/menu.css" />
+<load href="__PUBLIC__/css/RoomYY/applyEdit.css" />
+
+</head>
+
+<body>
+<include file="Common:Menu" />
+
+<table  border="1">
+<thead>
+	<th>编号</th>
+	<th>姓名</th>
+	<th>权限等级</th>
+	<th>联系电话</th>
+	<th>所属部门</th>
+	<th>登陆次数</th>
+	
+	<th>操作</th>
+</thead>
+<tbody>
+<volist name="user" id="vo">
+
+	<tr>
+		<form method="post" action="__ROOT__/Admin/userMgr/edit">
+		<input name="id" type="hidden" value="{$vo.id}"/>
+		<td>{$vo.id}</td>
+		<td>
+			<if condition="$vo.type neq 2"> {$vo.name}
+			</td>
+			<else /><input name="name" type="text" value="{$vo.name}"/> 
+			</if>
+		<td>
+			<if condition="$vo.type eq 1"> <span style="color:green;">管理人</a>
+			<elseif condition="$vo.type eq 2"/><span >个人</span>
+			<elseif condition="$vo.type eq 3"/><span style="color:green;">部门</span>
+			<elseif condition="$vo.type eq 4"/><span style="color:green;">总务处</span>
+			<else /> 
+			</if>
+		</td>
+		<td><input name="phone" type="text" value="{$vo.phone}"/></td>
+		<td>{$vo.department}</td>
+		<td>{$vo.logTime}</td>
+		<td><input name="submit" type="submit" value="修改"/> | <a href="__ROOT__/Admin/userMgr/del/{$vo.id}">删除</a></td>
+		</form>
+	</tr>
+	
+</volist>
+</tbody>
+</table>
+
+
+<include file="Common:footer" />
+</body>
+
+
+
+</html>

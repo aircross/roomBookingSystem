@@ -1,0 +1,28 @@
+<ul id="menu">
+	
+	<li><a href="__ROOT__/Common/situation.html">借用情况</a></li>  
+	<if condition="(session('type') eq 2) || (session('type') eq 3)"> 
+		<li><a href="__ROOT__/Common/apply.html">借用申请</a></li>
+      
+      	<li><a href="__ROOT__/Common/myApply.html">我的申请</a></li>
+
+    </if> 
+    <if condition="(session('type') eq 3) || (session('type') eq 4)">
+		<li><a href="__ROOT__/Common/applyCheck.html">借用审核</a></li>
+	</if>	
+	<if condition="(session('type') eq 4)">
+		<li ><a href="__ROOT__/Admin/applyEdit.html">强制修改</a></li>
+		
+    <li><a href="__ROOT__/Admin/userMgr.html">用户管理</a></li>  
+   <!-- <li><a href="__URL__/roomManager.html">教室管理</a></li>
+    -->
+	
+
+	</if>
+
+    
+    <li style="float:right;padding-right: 0;"><a href="__ROOT__/Index/quit.html">退出</a></li>
+    <li style="float:right;"><a href="__URL__/passChange.html">密码更改</a></li>
+  <li style="float:right;">{$name}{$department}</li>  
+    
+</ul>
